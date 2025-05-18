@@ -1,5 +1,6 @@
 import Image from "next/image";
 import BannerSection from "./components/BannerSection";
+import CharacterSection from "./components/CharacterSection";
 import FeatureSection from "./components/FeatureSection";
 import Hero from "./components/HeroSection";
 import NewsSection from "./components/NewSection";
@@ -24,6 +25,7 @@ export default function Home() {
 					buttonText="Start shopping"
 				/>
 			</section>
+
 			<hr />
 			<section id="gaming-system">
 				<BannerSection
@@ -51,6 +53,11 @@ export default function Home() {
 			<section id="news" className="my-8 px-5 xl:px-24">
 				<NewsSection />
 			</section>
+			<hr />
+			<section id="characters">
+				<CharacterSection />
+			</section>
+
 			<hr />
 		</div>
 	);
