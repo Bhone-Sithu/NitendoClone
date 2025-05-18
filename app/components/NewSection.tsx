@@ -74,7 +74,7 @@ const allNewsItems: NewsItem[] = [
 const NewsCard = ({ item }: { item: NewsItem }) => {
 	return (
 		<div className="flex flex-col group cursor-pointer">
-			<div className="relative h-48 w-full overflow-hidden rounded-t-lg">
+			<div className="relative h-24 md:h-48 w-full overflow-hidden rounded-t-lg">
 				<Image
 					src={item.image}
 					alt={item.title}
@@ -83,18 +83,20 @@ const NewsCard = ({ item }: { item: NewsItem }) => {
 				/>
 			</div>
 
-			<div className="p-4 flex flex-col flex-grow ">
+			<div className="md:p-4 flex flex-col flex-grow ">
 				<div className="flex items-center mb-2">
 					<span className="text-primary text-xl font-medium mr-2">♥</span>
 					<span className="text-secondary text-sm">{item.date}</span>
 				</div>
 
-				<h3 className="font-semibold text-secondary mb-2 group-hover:text-primary transistion duration-500">
+				<h3 className="font-semibold text-sm md:text-lg text-secondary mb-2 group-hover:text-primary transition duration-500 break-words line-clamp-3 sm:line-clamp-2">
 					{item.title}
 				</h3>
 
 				{item.description && (
-					<p className="text-secondary text-sm mb-3">{item.description}</p>
+					<p className="text-secondary text-sm mb-3 line-clamp-2">
+						{item.description}
+					</p>
 				)}
 
 				<span className="text-primary mt-auto cursor-pointer text-md font-medium underline ">
@@ -114,7 +116,7 @@ export default function NewsSection() {
 			<h2 className="text-3xl text-secondary font-bold mb-6">News</h2>
 
 			{/* Featured news - 2 columns */}
-			<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-y-6 gap-x-8">
+			<div className="grid grid-cols-1 lg:grid-cols-2  gap-y-6 gap-x-8">
 				{featuredNews.map((item) => (
 					<NewsCard key={item.id} item={item} />
 				))}
@@ -123,7 +125,7 @@ export default function NewsSection() {
 			<br />
 
 			{/* Regular news - 4 columns */}
-			<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+			<div className="grid grid-cols-2  lg:grid-cols-4 gap-6">
 				{regularNews.map((item) => (
 					<NewsCard key={item.id} item={item} />
 				))}

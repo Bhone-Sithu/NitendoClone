@@ -48,7 +48,7 @@ export default function Home() {
 			</section>
 			<hr />
 
-			<section id="news" className="my-8 px-24">
+			<section id="news" className="my-8 px-5 xl:px-24">
 				<NewsSection />
 			</section>
 			<hr />
