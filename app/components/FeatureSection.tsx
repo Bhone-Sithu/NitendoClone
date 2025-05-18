@@ -1,9 +1,10 @@
 "use client";
 import React from "react";
-import { Navigation } from "swiper/modules";
+import { FreeMode, Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
+import "swiper/css/free-mode";
 import Image from "next/image";
 
 type FeaturedItem = {
@@ -106,16 +107,33 @@ export default function FeatureSection() {
 		<section className="my-5 ">
 			<h2 className="text-3xl text-secondary font-bold mb-10 ml-8">Featured</h2>
 			<Swiper
-				modules={[Navigation]}
-				slidesPerView={4.5}
-				slidesPerGroup={4}
+				modules={[Navigation, FreeMode]}
 				spaceBetween={24}
-				navigation
 				speed={500}
 				className="py-4"
+				navigation={true}
+				freeMode={false}
+				slidesPerView={1.2}
+				slidesPerGroup={1}
+				breakpoints={{
+					640: {
+						slidesPerView: 2.2,
+						slidesPerGroup: 2,
+						freeMode: true,
+						navigation: false,
+					},
+					768: {
+						slidesPerView: 3.2,
+						slidesPerGroup: 3,
+					},
+					1024: {
+						slidesPerView: 4.5,
+						slidesPerGroup: 4,
+					},
+				}}
 			>
 				{featuredItems.map((item, index) => (
-					<SwiperSlide key={item.title}>
+					<SwiperSlide key={`${item.title}-${item.image}-${index}`}>
 						<div
 							className={`bg-white border border-gray-200 rounded-2xl shadow-lg overflow-hidden h-[330px] w-fit flex flex-col ${index === 0 ? "ml-8" : ""} ${index === featuredItems.length - 1 ? "mr-8" : ""} `}
 						>
@@ -126,7 +144,7 @@ export default function FeatureSection() {
 								height={100}
 							/>
 							<div className="p-4 flex flex-col h-full justify-between">
-								<div className="text-secondary font-semibold text-base mb-2 text-sm">
+								<div className="text-secondary font-semibold text-base mb-2">
 									{item.title}
 								</div>
 								<div>
@@ -146,6 +164,13 @@ export default function FeatureSection() {
 				))}
 			</Swiper>
 			<style jsx global>{`
+            @media (max-width: 639px) {
+  .swiper-button-next,
+  .swiper-button-prev {
+    display: none !important;
+  }
+}
+
         .swiper-button-next,
         .swiper-button-prev {
           position: absolute;
