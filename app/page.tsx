@@ -2,6 +2,7 @@ import Image from "next/image";
 import BannerSection from "./components/BannerSection";
 import FeatureSection from "./components/FeatureSection";
 import Hero from "./components/HeroSection";
+import NewsSection from "./components/NewSection";
 
 export default function Home() {
 	return (
@@ -44,6 +45,11 @@ export default function Home() {
 				<p className=" text-gray-500 text-sm mx-5 lg:mx-24">
 					Terms apply. https://www.nintendo.com/us/purchase-terms/
 				</p>
+			</section>
+			<hr />
+
+			<section id="news" className="my-8 px-24">
+				<NewsSection />
 			</section>
 			<hr />
 		</div>
