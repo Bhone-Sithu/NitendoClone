@@ -36,6 +36,12 @@ a {
 	color: var(--color-primary);
 	cursor: pointer;
 }
+hr {
+	color: var(--color-secondary);
+	opacity: 0.2;
+	margin-top: 3rem;
+	margin-bottom: 4rem;
+}
 @layer base {
 	/* Smooth scrolling for better UX (IMO) */
 	html {

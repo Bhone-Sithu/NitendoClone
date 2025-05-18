@@ -40,7 +40,7 @@ export default function Hero() {
 			>
 				{slides.map((slide, idx) => (
 					<SwiperSlide key={slide.title}>
-						<div className="relative w-full h-[400px] md:h-[400px] flex flex-col justify-end">
+						<div className="relative w-full h-[300px] md:h-[400px] flex flex-col justify-end">
 							<Image
 								src={slide.img}
 								alt={slide.title}
@@ -51,10 +51,10 @@ export default function Hero() {
 						</div>
 
 						<div className="  w-full p-8 flex justify-between">
-							<p className="text-xl md:text-3xl w-9/12 font-bold text-white">
+							<p className="text-lg md:text-2xl md:w-9/12 font-bold text-white text-center md:text-start">
 								{slide.title}
 							</p>
-							<div className="flex items-center gap-2">
+							<div className="hidden md:flex items-center gap-2">
 								<Image
 									src="/assets/image-rating.png"
 									alt="Rating"
