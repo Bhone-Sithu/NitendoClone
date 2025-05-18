@@ -3,6 +3,7 @@
 @theme {
 	--color-primary: rgb(230, 0, 18);
 	--color-foreground: #ffffff;
+	--color-secondary: #484848;
 }
 
 :root {
@@ -16,6 +17,25 @@
 	--foreground: #ffffff;
 }
 
+p,
+h1,
+a {
+	color: var(--color-secondary);
+}
+a {
+	text-decoration: none;
+	font-size: 0.8rem;
+}
+.nav-link {
+	font-size: 0.9rem;
+	font-weight: 800;
+	color: var(--color-secondary);
+	user-select: none;
+}
+.nav-link:hover {
+	color: var(--color-primary);
+	cursor: pointer;
+}
 @layer base {
 	/* Smooth scrolling for better UX (IMO) */
 	html {
