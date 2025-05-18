@@ -1,6 +1,7 @@
 import Image from "next/image";
 import BannerSection from "./components/BannerSection";
 import CharacterSection from "./components/CharacterSection";
+import DigitalSection from "./components/DigitalSection";
 import FeatureSection from "./components/FeatureSection";
 import Hero from "./components/HeroSection";
 import NewsSection from "./components/NewSection";
@@ -59,6 +60,20 @@ export default function Home() {
 			</section>
 
 			<hr />
+			<section id="digital" className="my-8 px-5 xl:px-24">
+				<DigitalSection />
+			</section>
+
+			<div className="w-full h-[100px] bg-primary flex items-center justify-center">
+				<Image
+					src="https://upload.wikimedia.org/wikipedia/commons/0/0d/Nintendo.svg"
+					alt="Nintendo Logo"
+					className="object-contain"
+					width={200}
+					height={10}
+					priority
+				/>
+			</div>
 		</div>
 	);
 }
