@@ -18,7 +18,7 @@ interface DigitalCardProps {
 export default function DigitalCard({ item }: DigitalCardProps) {
 	return (
 		<div className="bg-white border border-gray-200 rounded-2xl shadow-lg overflow-hidden h-[400px] w-fit flex flex-col group cursor-pointer">
-			<div className="relative h-[550px] w-[300px] overflow-hidden">
+			<div className="relative h-[550px] xl:w-[300px] overflow-hidden">
 				<Image
 					src={item.image}
 					alt={item.title}
@@ -33,9 +33,10 @@ export default function DigitalCard({ item }: DigitalCardProps) {
 					</h3>
 					<p className="text-secondary text-sm">{item.releaseDate}</p>
 				</div>
-				<div className="flex flex-col justify-between ">
+				<div className="flex flex-col justify-between gap-5 ">
 					<div className="flex items-center gap-5">
 						<span className="text-lg font-bold">{item.price}</span>
+
 						<span className="text-sm opacity-50 font-bold line-through">
 							{item.price + 30}
 						</span>

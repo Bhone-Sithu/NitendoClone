@@ -306,16 +306,19 @@ const FooterSection = () => {
 					</div>
 				</div>
 			</div>
-			<div className="h-[80px] bg-secondary w-full text-center flex items-center justify-between text-white text-xs px-10">
-				<span className="text-start">
+			<br />
+			<div className="h-[250px] md:h-[80px] bg-secondary w-full text-center flex flex-col md:flex-row justify-center items-center md:justify-between text-white text-xs px-10 ">
+				<span className="md:text-start text-center">
 					© 2025 Nintendo. Games are property of their respective owners.
 					Nintendo of America Inc. Headquarters are in Redmond, Washington, USA
 				</span>
-				<div className="flex items-center gap-4">
+				<br />
+				<div className="flex flex-col md:flex-row items-center gap-4">
 					<span>Contact us</span>
 					<span>Website feedback</span>
 					<span>Terms of Use</span>
 				</div>
+				<br />
 				<div className="flex items-center gap-2">
 					<img src="/assets/logo-usa.svg" alt="USA Flag" className="w-7 h-7 " />
 					<span>English (United States)</span>

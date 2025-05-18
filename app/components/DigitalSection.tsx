@@ -78,11 +78,11 @@ const digitalItems: DigitalItem[] = [
 export default function DigitalSection() {
 	return (
 		<section className="my-5">
-			<div className="flex gap-5 items-center mb-10 mx-8">
-				<h2 className="text-3xl text-secondary font-bold">
+			<div className="flex-col md:flex-row gap-5 items-center mb-10 md:mx-8">
+				<h2 className="text-xl md:text-3xl text-secondary font-bold">
 					Digital best sellers
 				</h2>
-				<span className="border-black-200 text-primary underline cursor-pointer border-l-1  pl-5">
+				<span className=" border-black-200 text-primary underline cursor-pointer border-l-1  pl-5">
 					See full list
 				</span>
 			</div>
