@@ -39,8 +39,7 @@ const allNewsItems: NewsItem[] = [
 		id: "3",
 		image: "/assets/image-champion.avif",
 		date: "05/12/25",
-		title:
-			"Competition #44 is on now in Nintendo World Championships: NES Edition",
+		title: "Competition #44 is on now in Nintendo World Championships: NES Edition",
 		description: "",
 		link: "#",
 	},
@@ -48,8 +47,7 @@ const allNewsItems: NewsItem[] = [
 		id: "4",
 		image: "/assets/image-zelda-track.avif",
 		date: "05/10/25",
-		title:
-			"Enjoy an epic playlist featuring tracks from the Legend of Zelda series",
+		title: "Enjoy an epic playlist featuring tracks from the Legend of Zelda series",
 		description: "",
 		link: "#",
 	},
@@ -65,8 +63,7 @@ const allNewsItems: NewsItem[] = [
 		id: "6",
 		image: "/assets/image-champion.avif",
 		date: "05/04/25",
-		title:
-			"Competition #43 is on now in Nintendo World Championships: NES Edition",
+		title: "Competition #43 is on now in Nintendo World Championships: NES Edition",
 		description: "",
 		link: "#",
 	},
@@ -96,9 +93,7 @@ const NewsCard = ({ item }: { item: NewsItem }) => {
 				</h3>
 
 				{item.description && (
-					<p className="text-secondary text-sm mb-3 line-clamp-2">
-						{item.description}
-					</p>
+					<p className="text-secondary text-sm mb-3 line-clamp-2">{item.description}</p>
 				)}
 
 				<span className="text-primary mt-auto cursor-pointer text-md font-medium underline ">

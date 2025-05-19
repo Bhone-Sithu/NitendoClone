@@ -86,11 +86,7 @@ export default function Navbar() {
 						<span className="text-primary">Log in / Sign up</span>
 					</button>
 
-					<img
-						src="/assets/logo-usa.svg"
-						alt="USA Flag"
-						className="w-7 h-7 mr-5"
-					/>
+					<img src="/assets/logo-usa.svg" alt="USA Flag" className="w-7 h-7 mr-5" />
 				</div>
 			</nav>
 

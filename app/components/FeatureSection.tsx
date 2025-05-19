@@ -137,16 +137,9 @@ export default function FeatureSection() {
 						<div
 							className={`bg-white border border-gray-200 rounded-2xl shadow-lg overflow-hidden h-[330px] w-fit flex flex-col ${index === 0 ? "ml-8" : ""} ${index === featuredItems.length - 1 ? "mr-8" : ""} `}
 						>
-							<Image
-								src={item.image}
-								alt={item.title}
-								width={300}
-								height={100}
-							/>
+							<Image src={item.image} alt={item.title} width={300} height={100} />
 							<div className="p-4 flex flex-col h-full justify-between">
-								<div className="text-secondary font-semibold text-base mb-2">
-									{item.title}
-								</div>
+								<div className="text-secondary font-semibold text-base mb-2">{item.title}</div>
 								<div>
 									<span
 										className="text-white rounded-lg px-4 py-1 text-sm font-medium"

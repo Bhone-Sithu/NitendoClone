@@ -37,9 +37,7 @@ export default function DigitalCard({ item }: DigitalCardProps) {
 					<div className="flex items-center gap-5">
 						<span className="text-lg font-bold">{item.price}</span>
 
-						<span className="text-sm opacity-50 font-bold line-through">
-							{item.price + 30}
-						</span>
+						<span className="text-sm opacity-50 font-bold line-through">{item.price + 30}</span>
 						<span className="text-xs font-bold text-white bg-primary px-2 py-1 rounded-full ">
 							-80%
 						</span>

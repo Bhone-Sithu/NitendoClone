@@ -23,13 +23,11 @@ export default function Hero() {
 		},
 		{
 			img: "/assets/hero/image-donkey-kong.png",
-			title:
-				"The big guy is back—Donkey Kong returns in a ground-breaking new adventure!",
+			title: "The big guy is back—Donkey Kong returns in a ground-breaking new adventure!",
 		},
 		{
 			img: "/assets/hero/image-zelda.png",
-			title:
-				"Explore an even more breathtaking Hyrule on Nintendo Switch™ 2—available June 5",
+			title: "Explore an even more breathtaking Hyrule on Nintendo Switch™ 2—available June 5",
 		},
 	];
 	const handleSwiper = (swiper: SwiperInstance) => {
@@ -66,12 +64,7 @@ export default function Hero() {
 								{slide.title}
 							</p>
 							<div className="hidden md:flex items-center gap-2">
-								<Image
-									src="/assets/image-rating.png"
-									alt="Rating"
-									width={40}
-									height={40}
-								/>
+								<Image src="/assets/image-rating.png" alt="Rating" width={40} height={40} />
 								<p className="text-sm">Fantasy Violence</p>
 							</div>
 						</div>
