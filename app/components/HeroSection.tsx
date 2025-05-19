@@ -49,12 +49,13 @@ export default function Hero() {
 			>
 				{slides.map((slide, idx) => (
 					<SwiperSlide key={slide.title}>
-						<div className="relative w-full h-[300px] md:h-[400px] flex flex-col justify-end">
+						<div className="relative flex  flex-col justify-end">
 							<Image
 								src={slide.img}
 								alt={slide.title}
-								fill
-								className="object-contain"
+								width={1920}
+								height={1080}
+								className="object-cover "
 								priority={idx === 0}
 							/>
 						</div>
