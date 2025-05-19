@@ -174,7 +174,7 @@ export default function FeatureSection() {
         .swiper-button-next,
         .swiper-button-prev {
           position: absolute;
-          top: 3%;
+          top: 0%;
           width: 80px;
           height: 370px;
           border-radius: 16px;

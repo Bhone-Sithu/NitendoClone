@@ -14,6 +14,7 @@
 	},
 	"dependencies": {
 		"biome": "^0.3.3",
+		"framer-motion": "^12.12.1",
 		"lucide": "^0.511.0",
 		"lucide-react": "^0.511.0",
 		"next": "15.3.2",

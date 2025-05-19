@@ -49,7 +49,7 @@ export default function DigitalCard({ item }: DigitalCardProps) {
 							<Gamepad2 color="grey" />
 							<span className="text-secondary text-sm">{item.type}</span>
 						</div>
-						<Heart color="red" />
+						<Heart color="red" className="hover:animate-heartbeat" />
 					</div>
 				</div>
 			</div>

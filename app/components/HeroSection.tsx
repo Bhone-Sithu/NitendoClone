@@ -14,16 +14,20 @@ export default function Hero() {
 
 	const slides = [
 		{
-			img: "/assets/hero-mariokart.jpg",
+			img: "/assets/hero/image-mario-gangs.png",
+			title: "Nintendo San Fransisco Grand Opening Celebration",
+		},
+		{
+			img: "/assets/hero/image-mario-kart.png",
 			title: "Start your engines and race across a sprawling world!",
 		},
 		{
-			img: "/assets/hero-donkeykong.jpg",
+			img: "/assets/hero/image-donkey-kong.png",
 			title:
 				"The big guy is back—Donkey Kong returns in a ground-breaking new adventure!",
 		},
 		{
-			img: "/assets/hero-zelda.avif",
+			img: "/assets/hero/image-zelda.png",
 			title:
 				"Explore an even more breathtaking Hyrule on Nintendo Switch™ 2—available June 5",
 		},
