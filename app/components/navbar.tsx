@@ -64,7 +64,7 @@ export default function Navbar() {
 						<img
 							src="/assets/logo-usa.svg"
 							alt="USA Flag"
-							className="w-7 h-7 mr-5"
+							className="block lg:hidden w-7 h-7 mr-5"
 						/>
 					</div>
 					<ul className="hidden lg:flex items-center gap-6 text-white font-medium">
