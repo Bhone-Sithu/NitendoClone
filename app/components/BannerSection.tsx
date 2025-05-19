@@ -26,14 +26,13 @@ export default function Banner({
 	return (
 		<div className={`my-8 ${className} mx-5 lg:mx-24 flex flex-col gap-10`}>
 			<h1 className="text-3xl font-semibold ">{title}</h1>
-			<div
-				className={`relative rounded-xl overflow-hidden w-full ${imageHeight}`}
-			>
+			<div className="relative rounded-xl overflow-hidden ] ">
 				<Image
 					src={imageSrc}
 					alt={imageAlt}
-					fill
-					className="object-cover"
+					width={1920}
+					height={1080}
+					className="w-full h-[30vh] md:h-auto object-cover"
 					priority
 				/>
 			</div>
@@ -44,7 +43,7 @@ export default function Banner({
 				<button
 					type="button"
 					onClick={onButtonClick}
-					className="bg-[#e60012] w-full md:w-auto  text-white font-semibold px-6 py-3 rounded-lg shadow hover:bg-red-700 transition-colors "
+					className="bg-primary w-full md:w-auto  text-white font-semibold px-6 py-3 rounded-lg shadow hover:bg-red-800 transition-colors hover:scale-105  hover:animate-heartbeat cursor-pointer "
 				>
 					{buttonText}
 				</button>

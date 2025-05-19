@@ -80,7 +80,7 @@ export default function Hero() {
 						type="button"
 						key={slide.img}
 						onClick={() => swiperRef.current?.slideToLoop(idx)}
-						className={`relative rounded-lg overflow-hidden transition-all cursor-pointer p-1 ${
+						className={`relative rounded-lg overflow-hidden transition-all cursor-pointer p-1 hover:scale-105  hover:animate-heartbeat ${
 							idx === activeIndex ? "scale-110" : "opacity-70"
 						}`}
 						style={{ width: 48, height: 48 }}

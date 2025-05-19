@@ -96,12 +96,12 @@ export default function Navbar() {
 
 			{/* Mobile Bottom Navigation */}
 			<div className="lg:hidden fixed bottom-0 left-0 w-full flex justify-center my-10 z-50">
-				<nav className="w-[60%] shadow-2xl rounded-full bg-white border-t border-gray-200 px-6 py-3 ">
+				<nav className="w-[80%] shadow-2xl rounded-full bg-white border-t border-gray-200 px-6 py-3 ">
 					<div className="flex justify-between items-center relative">
 						<MobileNavLink icon={Menu} />
 						<MobileNavLink icon={Heart} />
 
-						<div className="rounded-full bg-primary p-3 absolute -top-6 left-1/2 transform -translate-x-1/2">
+						<div className="rounded-full bg-primary p-3 absolute -top-6 left-1/2 transform -translate-x-1/2 animate-pulse">
 							<Search size={30} color="white" />
 						</div>
 						{/* biome-ignore lint/style/useSelfClosingElements: Needed for search icon to stay center and float above  */}

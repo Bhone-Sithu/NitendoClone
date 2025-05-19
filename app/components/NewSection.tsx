@@ -1,4 +1,5 @@
 "use client";
+import { MessageSquareCode } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -74,11 +75,12 @@ const allNewsItems: NewsItem[] = [
 const NewsCard = ({ item }: { item: NewsItem }) => {
 	return (
 		<div className="flex flex-col group cursor-pointer">
-			<div className="relative h-24 md:h-48 w-full overflow-hidden rounded-t-lg">
+			<div className="relative h-auto w-full overflow-hidden rounded-t-lg">
 				<Image
 					src={item.image}
 					alt={item.title}
-					fill
+					width={1920}
+					height={1080}
 					className="object-cover group-hover:scale-110 transition duration-500"
 				/>
 			</div>
@@ -116,7 +118,7 @@ export default function NewsSection() {
 			<h2 className="text-3xl text-secondary font-bold mb-6">News</h2>
 
 			{/* Featured news - 2 columns */}
-			<div className="grid grid-cols-1 lg:grid-cols-2  gap-y-6 gap-x-8">
+			<div className="grid grid-cols-1 md:grid-cols-2  gap-y-6 gap-x-8">
 				{featuredNews.map((item) => (
 					<NewsCard key={item.id} item={item} />
 				))}
@@ -133,8 +135,9 @@ export default function NewsSection() {
 
 			<button
 				type="button"
-				className="bg-[#e60012] w-full md:w-auto  text-white font-semibold px-6 py-3 rounded-lg shadow hover:bg-red-700 transition-colors mt-8"
+				className="bg-primary flex items-center gap-3 w-full cursor-pointer md:w-auto  text-white font-semibold px-6 py-3 rounded-lg shadow hover:bg-red-800 transition-colors mt-8 hover:scale-110  hover:animate-heartbeat"
 			>
+				<MessageSquareCode />
 				See All News Articles
 			</button>
 		</>
