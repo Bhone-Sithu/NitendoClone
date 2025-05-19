@@ -122,7 +122,7 @@ export default function CharacterSection() {
 		<section className="my-8 px-5 xl:px-24">
 			<h2 className="text-3xl text-secondary font-bold mb-8">Characters</h2>
 
-			<div className="grid grid-cols-2  md:grid-cols-4 gap-8">
+			<div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
 				{characters.map((character) => (
 					<CharacterCard key={character.id} character={character} />
 				))}

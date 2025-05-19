@@ -4,6 +4,8 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import type { Swiper as SwiperInstance } from "swiper"; // TO fix typescript type warning
 import "swiper/css/pagination";
+import { Autoplay } from "swiper/modules";
+import "swiper/css/autoplay";
 import { useRef, useState } from "react";
 
 export default function Hero() {
@@ -36,6 +38,11 @@ export default function Hero() {
 				onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
 				slidesPerView={1}
 				loop
+				modules={[Autoplay]}
+				autoplay={{
+					delay: 4000,
+					disableOnInteraction: false,
+				}}
 				className="rounded-lg overflow-hidden"
 			>
 				{slides.map((slide, idx) => (
@@ -73,22 +80,46 @@ export default function Hero() {
 						type="button"
 						key={slide.img}
 						onClick={() => swiperRef.current?.slideToLoop(idx)}
-						className={`border-2 rounded-lg overflow-hidden transition-all ${
-							idx === activeIndex
-								? "border-red-500 scale-110"
-								: "border-transparent opacity-70"
+						className={`relative rounded-lg overflow-hidden transition-all cursor-pointer p-1 ${
+							idx === activeIndex ? "scale-110" : "opacity-70"
 						}`}
 						style={{ width: 48, height: 48 }}
 						aria-label={`Go to slide ${idx + 1}`}
 					>
+						{idx === activeIndex && (
+							<div className="absolute inset-0 animate-border-flow">
+								<div className="absolute inset-0 border-2 border-primary rounded-lg" />
+							</div>
+						)}
 						<img
 							src={slide.img}
 							alt={slide.title}
-							className="object-cover w-full h-full"
+							className="object-cover w-full h-full rounded-md"
 						/>
 					</button>
 				))}
 			</div>
 		</div>
 	);
+}
+
+const styles = `
+@keyframes borderFlow {
+  0% {
+    clip-path: inset(0 100% 0 0);
+  }
+  100% {
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+.animate-border-flow {
+  animation: borderFlow 4.25s linear infinite;
+}
+`;
+
+if (typeof document !== "undefined") {
+	const styleSheet = document.createElement("style");
+	styleSheet.innerText = styles;
+	document.head.appendChild(styleSheet);
 }
